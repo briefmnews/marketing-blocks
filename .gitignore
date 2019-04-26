@@ -1,0 +1,9 @@
+.idea
+.python-version
+.pytest_cache
+.cache
+*.pyc
+tests/__pycache__
+
+.coverage
+htmlcov
