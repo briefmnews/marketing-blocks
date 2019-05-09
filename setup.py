@@ -7,9 +7,10 @@ setup(name='marketing-blocks',
       author='Brief.me',
       author_email='tech@brief.me',
       license=None,
-      packages=['marketing_blocks'],
+      packages=['marketing_blocks', 'marketing_blocks.migrations'],
       python_requires="==2.7.*",
       install_requires=[
         'Django>=1.11',
+        'django-model-utils>=3.1.2'
       ],
       zip_safe=False)
