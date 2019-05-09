@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='marketing-blocks',
-      version='0.1',
+      version='0.1.1',
       description='Handle marketing blocks from back office',
       url='https://github.com/briefmnews/marketing-blocks',
       author='Brief.me',
