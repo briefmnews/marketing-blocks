@@ -2,7 +2,8 @@
 [![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/release/python-270/) 
 [![Django 1.11](https://img.shields.io/badge/django-1.11-blue.svg)](https://docs.djangoproject.com/en/1.11/)
 [![Build Status](https://travis-ci.org/briefmnews/marketing-blocks.svg?branch=master)](https://travis-ci.org/briefmnews/marketing-blocks)
-[![codecov](https://codecov.io/gh/briefmnews/marketing-blocks/branch/master/graph/badge.svg)](https://codecov.io/gh/briefmnews/marketing-blocks)      
+[![codecov](https://codecov.io/gh/briefmnews/marketing-blocks/branch/master/graph/badge.svg)](https://codecov.io/gh/briefmnews/marketing-blocks)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)  
 Manage marketing blocks from back office for django
 
 ## Installation
