@@ -7,8 +7,8 @@ from .models import MarketingBlock
 
 
 class MarketingBlocksAdmin(admin.ModelAdmin):
-    list_display = ('title', 'position', 'active', 'modified')
-    list_filter = ('position',)
+    list_display = ("title", "position", "active", "modified")
+    list_filter = ("position",)
 
 
 admin.site.register(MarketingBlock, MarketingBlocksAdmin)

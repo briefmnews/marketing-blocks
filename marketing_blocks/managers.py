@@ -3,7 +3,6 @@ from django.db import models
 
 
 class MarketingBlocksManager(models.Manager):
-
     def get_active_block_for_position(self, position):
         """Returns the active block for a specific position"""
         try:

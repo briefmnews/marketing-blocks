@@ -11,17 +11,19 @@ from .managers import MarketingBlocksManager
 
 class MarketingBlock(TimeStampedModel):
 
-    POSITIONS = Choices('header', 'footer')
+    POSITIONS = Choices("header", "footer")
 
     title = models.CharField(max_length=200)
     content = models.TextField(blank=True, null=True)
     active = models.BooleanField(default=False)
-    position = models.CharField(choices=POSITIONS, default=POSITIONS.header, max_length=10)
+    position = models.CharField(
+        choices=POSITIONS, default=POSITIONS.header, max_length=10
+    )
 
     objects = MarketingBlocksManager()
 
     class Meta:
-        ordering = ['-active', '-modified']
+        ordering = ["-active", "-modified"]
 
     def __unicode__(self):
         return self.title
@@ -30,7 +32,9 @@ class MarketingBlock(TimeStampedModel):
 
         if self.active:
             try:
-                block = MarketingBlock.objects.get_active_block_for_position(self.position)
+                block = MarketingBlock.objects.get_active_block_for_position(
+                    self.position
+                )
                 block.active = False
                 block.save()
             except AttributeError:

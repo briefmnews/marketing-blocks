@@ -8,4 +8,4 @@ pytestmark = pytest.mark.django_db()
 
 class TestMarketingBlocksConfig(object):
     def test_apps(self):
-        assert 'marketing_blocks' in MarketingBlocksConfig.name
+        assert "marketing_blocks" in MarketingBlocksConfig.name
