@@ -4,5 +4,8 @@ clean:
 	find . -name '*.pyc' -delete
 	find . -name '__pycache__' -delete
 
-test:
+coverage:
 	pytest --cov=marketing_blocks tests
+
+report:
+	pytest --cov=marketing_blocks --cov-report=html tests
