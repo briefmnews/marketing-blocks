@@ -1,6 +1,6 @@
 import pytest
 
-from factories import MarketingBlocksFactory
+from .factories import MarketingBlocksFactory
 
 pytestmark = pytest.mark.django_db(transaction=True)
 
