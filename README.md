@@ -17,7 +17,7 @@ In order to make `marketing-blocks` works, you'll need to follow the steps below
 
 ### Settings
 First you need to add the following configuration to your settings:
-```python
+```python3
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -33,6 +33,26 @@ INSTALLED_APPS = (
 Next, you need to run the migrations in order to update your database schema.
 ```shell
 python manage.py migrate
+```
+
+## Hot to use ?
+In django-admin you can do to the app `Marketing_blocks` and create a new marketing bock.\
+3 positions are available:
+* **header**: only one header block can be active at the time.
+* **footer**: only one footer block can be active at the time.
+* **content**: you can set up to 10 content blocks.
+
+Next you can retrieve all the active blocks like this:
+```python3
+from marketing_blocks.models import MarketingBlock
+
+
+def dummy_view(request):
+    ...
+    
+    marketing_blocks = MarketingBlock.objects.get_block_contents_by_position()
+    
+    ...
 ```
 
 ## Tests
