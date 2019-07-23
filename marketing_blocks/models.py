@@ -11,7 +11,9 @@ from .managers import MarketingBlocksManager
 
 class MarketingBlock(TimeStampedModel):
 
-    POSITIONS = Choices("header", "footer")
+    POSITIONS = Choices(
+        "header", "footer", "pre_footer", "body_1", "body_2", "body_3", "body_4", "body_5"
+    )
 
     title = models.CharField(max_length=200)
     content = models.TextField(blank=True, null=True)
