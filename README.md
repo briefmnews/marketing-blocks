@@ -40,7 +40,8 @@ In django-admin you can do to the app `Marketing_blocks` and create a new market
 3 positions are available:
 * **header**: only one header block can be active at the time.
 * **footer**: only one footer block can be active at the time.
-* **content**: you can set up to 10 content blocks.
+* **pre_footer**: only one pre_footer block can be active at the time.
+* **body_{1..5}**: you can set up to 5 body blocks.
 
 Next you can retrieve all the active blocks like this:
 ```python3
