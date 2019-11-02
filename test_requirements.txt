@@ -1,5 +1,5 @@
 -r requirements.txt
-Django==1.11.21
+Django==1.11.23
 pytest==3.6.4
 pytest-cov==2.2.0
 pytest-factoryboy==2.0.2
