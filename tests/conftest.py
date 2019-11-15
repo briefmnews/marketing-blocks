@@ -6,7 +6,7 @@ from .factories import MarketingBlocksFactory
 @pytest.fixture
 def active_header_block():
     return MarketingBlocksFactory(
-        title="Active Header", content="I'm an active header", active=True
+        title="Active Header", content_mailchimp="I'm an active header", active=True
     )
 
 
@@ -14,7 +14,7 @@ def active_header_block():
 def active_footer_block():
     return MarketingBlocksFactory(
         title="Active Footer",
-        content="I'm an active footer",
+        content_mailchimp="I'm an active footer",
         active=True,
         position="footer",
     )
