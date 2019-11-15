@@ -21,7 +21,7 @@ class TestMarketingBlockManagers(object):
     ):
         """Returns all the active block contents as a dictionary."""
         # WHEN
-        dict_blocks = MarketingBlock.objects.get_block_contents_by_position()
+        dict_blocks = MarketingBlock.objects.get_block_contents_by_position(backend="mailchimp")
 
         # THEN
         assert type(dict_blocks) == dict
