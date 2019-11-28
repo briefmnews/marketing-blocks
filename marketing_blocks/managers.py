@@ -12,11 +12,11 @@ class MarketingBlocksManager(models.Manager):
 
         return block
 
-    def get_block_contents_by_position(self):
-        """Returns all the active block contents by position"""
+    def get_block_contents_by_position(self, backend):
+        """Returns all the active block contents by position, for given backend"""
 
         blocks = self.filter(active=True)
 
-        data = {block.position: block.content for block in blocks}
+        data = {block.position: getattr(block, f"content_{backend}", "") for block in blocks}
 
         return data
