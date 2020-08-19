@@ -1,4 +1,3 @@
-# -*- coding: utf# Create your models here.-8 -*-
 from __future__ import unicode_literals
 
 from model_utils import Choices
@@ -12,7 +11,7 @@ from .managers import MarketingBlocksManager
 class MarketingBlock(TimeStampedModel):
 
     POSITIONS = Choices(
-        "header", "footer", "pre_footer", "body_1", "body_2", "body_3", "body_4", "body_5"
+        "pre_header", "header", "footer", "pre_footer", "body_1", "body_2", "body_3", "body_4", "body_5"
     )
 
     title = models.CharField(max_length=200)
