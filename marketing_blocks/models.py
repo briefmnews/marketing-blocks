@@ -21,6 +21,7 @@ class MarketingBlock(TimeStampedModel):
     position = models.CharField(
         choices=POSITIONS, default=POSITIONS.header, max_length=10
     )
+    label = models.CharField(max_length=100, default="", null=True, blank=True)
 
     objects = MarketingBlocksManager()
 
