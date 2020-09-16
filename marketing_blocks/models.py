@@ -47,12 +47,12 @@ class MarketingBlock(TimeStampedModel):
 
         if self.active:
             try:
-                block = MarketingBlock.objects.get_active_block_for_position(
-                    self.position
+                block = MarketingBlock.objects.get_active_block_for_position_and_label(
+                    self.position, self.label
                 )
                 block.active = False
                 block.save()
             except AttributeError:
                 pass
 
-        super(MarketingBlock, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
