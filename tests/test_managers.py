@@ -9,7 +9,9 @@ class TestMarketingBlockManagers(object):
     def test_get_active_block_for_position(self, active_header_block):
         """Return the last active block for a specific position"""
         # WHEN
-        header = MarketingBlock.objects.get_active_block_for_position("header")
+        header = MarketingBlock.objects.get_active_block_for_position_and_label(
+            "header"
+        )
 
         # THEN
         assert header.title == "Active Header"
@@ -21,8 +23,8 @@ class TestMarketingBlockManagers(object):
     ):
         """Returns all the active block contents as a dictionary."""
         # WHEN
-        dict_blocks = MarketingBlock.objects.get_block_contents_by_position(
-            backend="mailchimp"
+        dict_blocks = MarketingBlock.objects.get_block_contents_by_position_for_label(
+            backend="mailchimp", label=""
         )
 
         # THEN
@@ -37,8 +39,8 @@ class TestMarketingBlockManagers(object):
         assert not hasattr(active_header_block, "content_stromboli")
 
         # WHEN
-        dict_blocks = MarketingBlock.objects.get_block_contents_by_position(
-            backend="stromboli"
+        dict_blocks = MarketingBlock.objects.get_block_contents_by_position_for_label(
+            backend="stromboli", label=""
         )
 
         # THEN
