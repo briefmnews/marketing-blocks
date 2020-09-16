@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('marketing_blocks', '0003_auto_20191115_1747'),
+        ("marketing_blocks", "0003_auto_20191115_1747"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='marketingblock',
-            name='content_mailchimp',
-            field=models.TextField(blank=True, null=True, verbose_name='Contenu pour Mailchimp'),
+            model_name="marketingblock",
+            name="content_mailchimp",
+            field=models.TextField(
+                blank=True, null=True, verbose_name="Contenu pour Mailchimp"
+            ),
         ),
     ]

@@ -17,6 +17,8 @@ class MarketingBlocksManager(models.Manager):
 
         blocks = self.filter(active=True)
 
-        data = {block.position: getattr(block, f"content_{backend}", "") for block in blocks}
+        data = {
+            block.position: getattr(block, f"content_{backend}", "") for block in blocks
+        }
 
         return data

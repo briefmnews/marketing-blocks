@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('marketing_blocks', '0004_auto_20191204_0918'),
+        ("marketing_blocks", "0004_auto_20191204_0918"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='marketingblock',
-            name='content_sendgrid',
-            field=models.TextField(blank=True, null=True, verbose_name='Contenu pour SendGrid'),
+            model_name="marketingblock",
+            name="content_sendgrid",
+            field=models.TextField(
+                blank=True, null=True, verbose_name="Contenu pour SendGrid"
+            ),
         ),
     ]
