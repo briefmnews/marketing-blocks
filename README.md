@@ -63,7 +63,7 @@ from marketing_blocks.models import MarketingBlock
 def dummy_view(request):
     ...
     
-    marketing_blocks = MarketingBlock.objects.get_block_contents_by_position()
+    marketing_blocks = MarketingBlock.objects.get_block_contents_by_position("mailchimp", label="issue")
     
     ...
 ```
