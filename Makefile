@@ -9,3 +9,6 @@ coverage:
 
 report:
 	pytest --cov=marketing_blocks --cov-report=html tests
+
+install:
+	pip install -r test_requirements.txt
