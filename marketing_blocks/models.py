@@ -20,6 +20,11 @@ class MarketingBlock(TimeStampedModel):
         "body_3",
         "body_4",
         "body_5",
+        "body_6",
+        "body_7",
+        "body_8",
+        "body_9",
+        "body_10",
     )
 
     title = models.CharField(max_length=200)
