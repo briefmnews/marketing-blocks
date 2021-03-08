@@ -6,13 +6,32 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('marketing_blocks', '0008_marketingblock_app_label'),
+        ("marketing_blocks", "0008_marketingblock_app_label"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='marketingblock',
-            name='position',
-            field=models.CharField(choices=[('pre_header', 'pre_header'), ('header', 'header'), ('footer', 'footer'), ('pre_footer', 'pre_footer'), ('body_1', 'body_1'), ('body_2', 'body_2'), ('body_3', 'body_3'), ('body_4', 'body_4'), ('body_5', 'body_5'), ('body_6', 'body_6'), ('body_7', 'body_7'), ('body_8', 'body_8'), ('body_9', 'body_9'), ('body_10', 'body_10')], default='header', max_length=10),
+            model_name="marketingblock",
+            name="position",
+            field=models.CharField(
+                choices=[
+                    ("pre_header", "pre_header"),
+                    ("header", "header"),
+                    ("footer", "footer"),
+                    ("pre_footer", "pre_footer"),
+                    ("body_1", "body_1"),
+                    ("body_2", "body_2"),
+                    ("body_3", "body_3"),
+                    ("body_4", "body_4"),
+                    ("body_5", "body_5"),
+                    ("body_6", "body_6"),
+                    ("body_7", "body_7"),
+                    ("body_8", "body_8"),
+                    ("body_9", "body_9"),
+                    ("body_10", "body_10"),
+                ],
+                default="header",
+                max_length=10,
+            ),
         ),
     ]
