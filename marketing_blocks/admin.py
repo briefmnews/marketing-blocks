@@ -20,6 +20,7 @@ class MarketingBlocksAdminForm(forms.ModelForm):
 class MarketingBlocksAdmin(admin.ModelAdmin):
     list_display = ("label", "title", "position", "active", "modified")
     list_filter = ("position", "label")
+    search_fields = ("title",)
     form = MarketingBlocksAdminForm
 
 
