@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from model_utils import Choices
 from model_utils.models import TimeStampedModel
 
