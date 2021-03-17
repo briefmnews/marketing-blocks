@@ -11,7 +11,7 @@ setup(
     license=None,
     packages=["marketing_blocks", "marketing_blocks.migrations"],
     python_requires=">=3.7",
-    install_requires=["Django>=2.2", "django-model-utils>=3.2.0"],
+    install_requires=["Django>=2.2,<3", "django-model-utils>=3.2.0,<4"],
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
