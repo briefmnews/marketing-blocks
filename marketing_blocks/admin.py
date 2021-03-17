@@ -27,7 +27,7 @@ class MarketingBlocksAdmin(admin.ModelAdmin):
         extra_context["buttons"] = MARKETING_BLOCKS_ADMIN_BUTTONS
         return super().changelist_view(request, extra_context=extra_context)
 
-    def change_view(self, request, object_id, form_url='', extra_context=None):
+    def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
         extra_context["buttons"] = MARKETING_BLOCKS_ADMIN_BUTTONS
         return super().change_view(request, object_id, form_url, extra_context)
