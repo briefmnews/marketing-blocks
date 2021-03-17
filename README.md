@@ -40,6 +40,25 @@ Here is an exemple of usage:
 MARKETING_BLOCKS_LABEL_CHOICES = [("", "-----"), ("issue", "Issue"), ("panorama", "Panorama")]
 ```
 
+You can add buttons in admin change_list and change_form with the following setting:
+```python
+MARKETING_BLOCKS_ADMIN_BUTTONS
+```
+
+Here is an exemple of usage:
+```python
+MARKETING_BLOCKS_ADMIN_BUTTONS = [
+    (
+        "<i class='icon-zoom-in icon-alpha75'></i> Preview Issue",
+        f"{SITE_DOMAIN}/a/email/dernier/?marketing=true",
+    ),
+    (
+        "<i class='icon-zoom-in icon-alpha75'></i> Preview Panorama",
+        f"{SITE_DOMAIN}/panoramas/email/dernier/?marketing=true",
+    ),
+]
+```
+
 ### Migrations
 Next, you need to run the migrations in order to update your database schema.
 ```shell
