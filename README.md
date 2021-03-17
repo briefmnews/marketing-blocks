@@ -53,7 +53,7 @@ In django-admin you can do to the app `Marketing_blocks` and create a new market
 * **header**: only one header block can be active at the time.
 * **footer**: only one footer block can be active at the time.
 * **pre_footer**: only one pre_footer block can be active at the time.
-* **body_{1..5}**: you can set up to 5 body blocks.
+* **body_{1..10}**: you can set up to 10 body blocks.
 
 Next you can retrieve all the active blocks like this:
 ```python
@@ -63,7 +63,7 @@ from marketing_blocks.models import MarketingBlock
 def dummy_view(request):
     ...
     
-    marketing_blocks = MarketingBlock.objects.get_block_contents_by_position("mailchimp", label="issue")
+    marketing_blocks = MarketingBlock.objects.get_active_block_for_position_and_label("mailchimp", label="issue")
     
     ...
 ```
