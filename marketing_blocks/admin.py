@@ -5,6 +5,7 @@ from django.contrib import admin
 from .models import MarketingBlock
 
 MARKETING_BLOCKS_LABEL_CHOICES = getattr(settings, "MARKETING_BLOCKS_LABEL_CHOICES", "")
+MARKETING_BLOCKS_ADMIN_BUTTONS = getattr(settings, "MARKETING_BLOCKS_ADMIN_BUTTONS", [])
 
 
 class MarketingBlocksAdminForm(forms.ModelForm):
@@ -20,6 +21,16 @@ class MarketingBlocksAdmin(admin.ModelAdmin):
     list_filter = ("position", "label")
     search_fields = ("title",)
     form = MarketingBlocksAdminForm
+
+    def changelist_view(self, request, extra_context=None):
+        extra_context = extra_context or {}
+        extra_context["buttons"] = MARKETING_BLOCKS_ADMIN_BUTTONS
+        return super().changelist_view(request, extra_context=extra_context)
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        extra_context = extra_context or {}
+        extra_context["buttons"] = MARKETING_BLOCKS_ADMIN_BUTTONS
+        return super().change_view(request, object_id, form_url, extra_context)
 
 
 admin.site.register(MarketingBlock, MarketingBlocksAdmin)

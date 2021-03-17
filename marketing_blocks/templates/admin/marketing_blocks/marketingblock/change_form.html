@@ -1,0 +1,8 @@
+{% extends "admin/change_form.html" %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    {% for button_name, button_href in buttons %}
+        <li><a href="{{ button_href }}" target="_blank">{{ button_name|safe }}</a></li>
+    {% endfor %}
+{% endblock %}
