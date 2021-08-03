@@ -23,6 +23,7 @@ class MarketingBlock(TimeStampedModel):
         "body_8",
         "body_9",
         "body_10",
+        "paywall",
     )
 
     title = models.CharField(max_length=200)
