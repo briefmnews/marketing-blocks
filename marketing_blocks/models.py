@@ -13,6 +13,7 @@ class MarketingBlock(TimeStampedModel):
         "header",
         "footer",
         "pre_footer",
+        "post_footer",
         "body_1",
         "body_2",
         "body_3",
@@ -35,7 +36,7 @@ class MarketingBlock(TimeStampedModel):
     )
     active = models.BooleanField(default=False)
     position = models.CharField(
-        choices=POSITIONS, default=POSITIONS.header, max_length=10
+        choices=POSITIONS, default=POSITIONS.header, max_length=11
     )
     label = models.CharField(max_length=100, default="", null=True, blank=True)
 
