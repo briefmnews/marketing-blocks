@@ -28,16 +28,9 @@ class MarketingBlock(TimeStampedModel):
     )
 
     title = models.CharField(max_length=200)
-    content_mailchimp = models.TextField(
-        blank=True, default="", verbose_name="Contenu pour Mailchimp"
-    )
-    content_sendgrid = models.TextField(
-        blank=True, default="", verbose_name="Contenu pour SendGrid"
-    )
+    content = models.TextField(blank=True, default="", verbose_name="Contenu")
     active = models.BooleanField(default=False)
-    position = models.CharField(
-        choices=POSITIONS, default=POSITIONS.header, max_length=11
-    )
+    position = models.CharField(choices=POSITIONS, default=POSITIONS.header, max_length=11)
     label = models.CharField(max_length=100, default="", null=True, blank=True)
 
     objects = MarketingBlocksManager()
