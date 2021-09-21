@@ -82,7 +82,7 @@ from marketing_blocks.models import MarketingBlock
 def dummy_view(request):
     ...
     
-    marketing_blocks = MarketingBlock.objects.get_active_block_for_position_and_label("mailchimp", label="issue")
+    marketing_blocks = MarketingBlock.objects.get_active_block_for_position_and_label(label="issue")
     
     ...
 ```
