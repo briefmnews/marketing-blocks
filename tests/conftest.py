@@ -1,7 +1,7 @@
 import pytest
 
 from .factories import MarketingBlocksFactory
-from .fake_models import Issue
+from .models import Issue
 
 
 @pytest.fixture
