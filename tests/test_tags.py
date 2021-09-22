@@ -29,13 +29,3 @@ class TestMarketingBlockTags:
 
         # THEN
         assert out == ""
-
-    def test_tag_display_nothing_when_marketing_is_silented(self, issue, active_header_block):
-        # GIVEN
-        template = "{% load marketing_blocks %}{% render_marketing_block obj 'header' %}"
-
-        # WHEN
-        out = Template(template).render(Context({"hide_marketing": True, "obj": issue}))
-
-        # THEN
-        assert out == ""

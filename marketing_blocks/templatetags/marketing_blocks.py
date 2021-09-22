@@ -13,9 +13,4 @@ def render_marketing_block(context, obj, position):
         label=obj._meta.model_name, position=position
     )
 
-    if block and not context.get("hide_marketing"):
-        block = block.content
-    else:
-        block = ""
-
-    return mark_safe(block)
+    return mark_safe(block.content if block else "")
