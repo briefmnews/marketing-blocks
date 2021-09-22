@@ -7,7 +7,7 @@ from .fake_models import Issue
 @pytest.fixture
 def active_header_block():
     return MarketingBlocksFactory(
-        title="Active Header", content="I'm an active header", active=True, label="issue"
+        title="Active Header", content="<p>I'm an active header</p>", active=True, label="issue"
     )
 
 
@@ -15,7 +15,7 @@ def active_header_block():
 def active_footer_block():
     return MarketingBlocksFactory(
         title="Active Footer",
-        content="I'm an active footer",
+        content="<p>I'm an active footer</p>",
         active=True,
         position="footer",
         label="issue",

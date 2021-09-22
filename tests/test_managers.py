@@ -25,5 +25,5 @@ class TestMarketingBlockManagers(object):
 
         # THEN
         assert type(dict_blocks) == dict
-        assert dict_blocks["header"] == u"I'm an active header"
-        assert dict_blocks["footer"] == u"I'm an active footer"
+        assert dict_blocks["header"] == u"<p>I'm an active header</p>"
+        assert dict_blocks["footer"] == u"<p>I'm an active footer</p>"

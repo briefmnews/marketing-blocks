@@ -17,7 +17,7 @@ class TestMarketingBlockTags:
         out = Template(template).render(Context({"obj": issue}))
 
         # THEN
-        assert out == "I'm an active header"
+        assert out == "<p>I'm an active header</p>"
 
     def test_tag_fail_silently_when_block_does_not_exist(self, issue, active_header_block):
         # GIVEN
