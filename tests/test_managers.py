@@ -9,21 +9,19 @@ class TestMarketingBlockManagers(object):
     def test_get_active_block_for_position(self, active_header_block):
         """Return the last active block for a specific position"""
         # WHEN
-        header = MarketingBlock.objects.get_active_block_for_position_and_label(
-            "header"
-        )
+        header = MarketingBlock.objects.get_active_block_for_position_and_label("header", "issue")
 
         # THEN
         assert header.title == "Active Header"
         assert header.active
         assert header.position == "header"
 
-    def test_get_block_contents_by_position(
-        self, active_header_block, active_footer_block
-    ):
+    def test_get_block_contents_by_position(self, active_header_block, active_footer_block):
         """Returns all the active block contents as a dictionary."""
         # WHEN
-        dict_blocks = MarketingBlock.objects.get_block_contents_by_position_for_label(label="")
+        dict_blocks = MarketingBlock.objects.get_block_contents_by_position_for_label(
+            label="issue"
+        )
 
         # THEN
         assert type(dict_blocks) == dict
