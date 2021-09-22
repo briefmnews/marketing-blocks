@@ -1,6 +1,7 @@
 import pytest
 
 from .factories import MarketingBlocksFactory
+from .fake_models import Issue
 
 
 @pytest.fixture
@@ -19,3 +20,8 @@ def active_footer_block():
         position="footer",
         label="issue",
     )
+
+
+@pytest.fixture
+def issue():
+    return Issue()

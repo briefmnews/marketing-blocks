@@ -10,3 +10,7 @@ INSTALLED_APPS = (
 )
 
 DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3"}}
+
+TEMPLATES = [
+    {"BACKEND": "django.template.backends.django.DjangoTemplates",},
+]
