@@ -14,7 +14,7 @@ class TestMarketingBlock(object):
 
         # WHEN
         second_block = MarketingBlocksFactory(
-            title="Title 2", content="bla 2", active=True, position="header"
+            title="Title 2", content="bla 2", active=True, position="header", label="issue"
         )
         assert second_block.active
 
