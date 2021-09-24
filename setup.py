@@ -9,7 +9,7 @@ setup(
     author="Brief.me",
     author_email="tech@brief.me",
     license=None,
-    packages=["marketing_blocks", "marketing_blocks.migrations"],
+    packages=["marketing_blocks", "marketing_blocks.migrations", "marketing_blocks.templatetags"],
     python_requires=">=3.7",
     install_requires=["Django>=2.2,<4", "django-model-utils>=4"],
     classifiers=[
